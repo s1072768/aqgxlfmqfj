@@ -147,7 +147,28 @@
         </ul>
         <img class="img-5" src="../static/bamow.jpg" alt="">
     </section>
+    <script>
+        $(document).ready(function () {
+            // 當點擊 Navbar 中的連結時，進行平滑滾動
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
 
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+   
+        function redirectToLink(url) {
+            window.location.href = url;
+        }
+    </script>
 
 </body>
 </html>
