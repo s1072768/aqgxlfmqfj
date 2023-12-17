@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人網站</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    
+    <header class="text-center py-5">
+        <h1>Ｌ　Ｎ　Ｇ</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg   fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">ＬＮＧ成員</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">LNG簡介</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">連結</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+            <br>
+            <br>
+            <div class="row">
+    
+                <div class="col-md-4">
+                    <div class="card custom-card" onclick="redirectToLink('HollandTest.html')">
+                        
+                        <div class="card-body">                          
+                            <h2 class="card-title">ＬＮＧ成員</h2>
+                            <br>
+                            <div class="title-box-1">
+                                <h5 class="card-body">鳥屎</h5>
+                            </div>                        
+                            <br>
+                            <div class="title-box-2">
+                                <h5 class="card-body">六嘆</h5>
+                            </div>                           
+                            <br>
+                            <div class="title-box-3">
+                                <h5 class="card-body">老王</h5>
+                            </div> 
+                            <br>
+                            <div class="title-box-4">
+                                <h5 class="card-body">小六</h5>
+                            </div>                        
+                            <br>
+                            <div class="title-box-5">
+                                <h5 class="card-body">Leggy</h5>
+                            </div>                        
+                            <br>
+                            <div class="title-box-6">
+                                <h5 class="card-body">八毛</h5>
+                            </div>                        
+                            <br>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+    
+                <div class="col-md-4">
+                    <div class="card custom-card" onclick="redirectToLink('about.html')">
+                        <div class="card-body">
+                            <h2 class="card-title">LNG簡介</h2>
+                            <br>
+                            <div class="title-box-4">
+                                <h5 class="card-body">發展歷史及活動內容</h5>
+                            </div>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">2009年 六嘆嘆白目電視台</li>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">2011年 薩爾納加洞穴美術館</li>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">2011年 LNG Radio</li>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">2012年 LNG WorkShop</li>
+                            <br>
+                            <li class="card-text-2" style="list-style-type: disc;">2018年 LNG Live，全員專注個人活動x</li>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card custom-card" onclick="redirectToLink('Resume.html')">
+                        <div class="card-body">
+                            <h2 class="card-title">相關連結</h2>
+                            <br>
+                            <div class="title-box-7">
+                                <h5 class="card-body" style="color: aliceblue;">Twitch</h5>
+                            </div>
+                            <br>
+                            <div class="title-box-8">
+                                <h5 class="card-body" style="color: aliceblue;">Youtube</h5>
+                            </div>
+                            <br>
+                            <div class="title-box-9">
+                                <h5 class="card-body" >Facebook</h5>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+    <!-- 引入 Bootstrap 及 Popper.js JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // 當點擊 Navbar 中的連結時，進行平滑滾動
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+   
+        function redirectToLink(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
